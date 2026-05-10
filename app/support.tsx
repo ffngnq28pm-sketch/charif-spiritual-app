@@ -154,7 +154,7 @@ export default function SupportScreen() {
 
           {/* Footer */}
           <View style={styles.footer}>
-            <Text style={[styles.footerArabic, { color: 'rgba(201,168,76,0.25)' }]}>Charif</Text>
+            <Text style={[styles.footerArabic, { color: 'rgba(201,168,76,0.25)' }]}>شريف</Text>
             <Text style={[styles.footerText, { color: colors.textMuted }]}>
               Que ce projet soit une Sadaqa Jariya — une aumône continue
             </Text>

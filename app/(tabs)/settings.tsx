@@ -413,7 +413,7 @@ export default function SettingsScreen() {
           </View>
 
           <View style={styles.footer}>
-            <Text style={[styles.footerArabic, { color: colors.textMuted }]}>Charif</Text>
+            <Text style={[styles.footerArabic, { color: colors.textMuted }]}>شريف</Text>
             <Text style={[styles.footerText, { color: colors.textMuted }]}>Version 2.0.0</Text>
             <Text style={[styles.footerTagline, { color: colors.textMuted }]}>Lumière, sagesse et sérénité — chaque jour.</Text>
           </View>

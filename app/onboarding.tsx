@@ -71,7 +71,7 @@ export default function OnboardingScreen() {
 
       {/* Header ornament */}
       <View style={styles.topOrnament}>
-        <Text style={styles.arabicLogo}>Charif</Text>
+        <Text style={styles.arabicLogo}>شريف</Text>
         <Text style={styles.logoSub}>Charif</Text>
       </View>
 
