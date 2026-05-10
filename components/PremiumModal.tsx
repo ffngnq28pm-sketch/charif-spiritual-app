@@ -49,7 +49,7 @@ export function PremiumModal({ visible, onClose, onUnlock }: Props) {
 
             <View style={styles.badge}>
               <Star size={14} color="#C9A84C" fill="#C9A84C" />
-              <Text style={styles.badgeText}>NOUR PREMIUM</Text>
+              <Text style={styles.badgeText}>CHARIF PREMIUM</Text>
             </View>
 
             <Text style={styles.headline}>Éveille ta lumière intérieure</Text>
@@ -126,7 +126,7 @@ export function PremiumModal({ visible, onClose, onUnlock }: Props) {
               start={{ x: 0, y: 0 }}
               end={{ x: 1, y: 0 }}
             >
-              <Text style={styles.ctaText}>Débloquer Nour Premium</Text>
+              <Text style={styles.ctaText}>Débloquer Charif Premium</Text>
             </LinearGradient>
           </TouchableOpacity>
 

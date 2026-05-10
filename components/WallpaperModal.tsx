@@ -77,7 +77,7 @@ export function WallpaperModal({ visible, card, onClose }: Props) {
                 </Text>
                 <Text style={styles.previewSource}>{card.source}</Text>
                 <View style={styles.previewSpacer} />
-                <Text style={styles.previewWatermark}>نور · Nour</Text>
+                <Text style={styles.previewWatermark}>Charif</Text>
               </View>
             </View>
             <View style={styles.phoneHome} />

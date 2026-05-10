@@ -70,7 +70,7 @@ export default function SupportScreen() {
             <View style={[styles.iconBadge, { backgroundColor: 'rgba(201,168,76,0.1)' }]}>
               <Heart size={30} color={accent} fill="rgba(201,168,76,0.25)" />
             </View>
-            <Text style={[styles.title, { color: colors.textPrimary }]}>Soutenir Nour</Text>
+            <Text style={[styles.title, { color: colors.textPrimary }]}>Soutenir Charif</Text>
             <Text style={[styles.subtitle, { color: colors.textMuted }]}>
               Aidez-nous à enrichir ce contenu spirituel et à préserver cet héritage de sagesse
               islamique et philosophique.
@@ -141,20 +141,20 @@ export default function SupportScreen() {
           <Text style={[styles.sectionLabel, { color: colors.textMuted }]}>NOUS CONTACTER</Text>
           <TouchableOpacity
             style={[styles.contactBtn, { backgroundColor: colors.bgSection, borderColor: colors.border }]}
-            onPress={() => Linking.openURL('mailto:support@nour-app.fr?subject=Nour%20-%20Retour%20utilisateur')}
+            onPress={() => Linking.openURL('mailto:support@charif-app.fr?subject=Charif%20-%20Retour%20utilisateur')}
             activeOpacity={0.8}
           >
             <Mail size={18} color={accent} />
             <View style={{ flex: 1 }}>
               <Text style={[styles.contactTitle, { color: colors.textPrimary }]}>Écrire à l'équipe</Text>
-              <Text style={[styles.contactSub, { color: colors.textMuted }]}>support@nour-app.fr</Text>
+              <Text style={[styles.contactSub, { color: colors.textMuted }]}>support@charif-app.fr</Text>
             </View>
             <ChevronLeft size={16} color={colors.textMuted} style={{ transform: [{ rotate: '180deg' }] }} />
           </TouchableOpacity>
 
           {/* Footer */}
           <View style={styles.footer}>
-            <Text style={[styles.footerArabic, { color: 'rgba(201,168,76,0.25)' }]}>نور</Text>
+            <Text style={[styles.footerArabic, { color: 'rgba(201,168,76,0.25)' }]}>Charif</Text>
             <Text style={[styles.footerText, { color: colors.textMuted }]}>
               Que ce projet soit une Sadaqa Jariya — une aumône continue
             </Text>

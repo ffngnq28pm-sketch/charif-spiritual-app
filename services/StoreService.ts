@@ -1,5 +1,5 @@
 /**
- * StoreService — RevenueCat integration for Nour in-app purchases.
+ * StoreService — RevenueCat integration for Charif in-app purchases.
  *
  * SETUP (one-time):
  *   1. Create a RevenueCat project at app.revenuecat.com
@@ -87,7 +87,7 @@ function notifyListeners(isPremium: boolean) {
 const CATALOG: Product[] = [
   {
     id: 'nour_premium_monthly',
-    title: 'Nour Premium — Mensuel',
+    title: 'Charif Premium — Mensuel',
     price: '4,99€',
     priceAmount: 4.99,
     currency: 'EUR',
@@ -96,7 +96,7 @@ const CATALOG: Product[] = [
   },
   {
     id: 'nour_premium_lifetime',
-    title: 'Nour Premium — À vie',
+    title: 'Charif Premium — À vie',
     price: '39,99€',
     priceAmount: 39.99,
     currency: 'EUR',

@@ -67,7 +67,7 @@ export default function SettingsScreen() {
                 <View style={styles.premiumLeft}>
                   <View style={styles.starBadge}><Star size={16} color="#C9A84C" fill="#C9A84C" /></View>
                   <View>
-                    <Text style={styles.premiumTitle}>Nour Premium</Text>
+                    <Text style={styles.premiumTitle}>Charif Premium</Text>
                     <Text style={styles.premiumDesc}>Accédez à la sagesse complète</Text>
                   </View>
                 </View>
@@ -77,7 +77,7 @@ export default function SettingsScreen() {
           ) : (
             <View style={[styles.premiumActive, { borderColor: 'rgba(201,168,76,0.25)', backgroundColor: 'rgba(201,168,76,0.08)' }]}>
               <Star size={16} color="#C9A84C" fill="#C9A84C" />
-              <Text style={[styles.premiumActiveText, { color: accent }]}>Nour Premium actif</Text>
+              <Text style={[styles.premiumActiveText, { color: accent }]}>Charif Premium actif</Text>
             </View>
           )}
 
@@ -373,7 +373,7 @@ export default function SettingsScreen() {
                 <Heart size={18} color={accent} />
                 <View>
                   <Text style={[styles.rowTitle, { color: colors.textSecondary }]}>
-                    ❤️ Soutenir Nour
+                    ❤️ Soutenir Charif
                   </Text>
                   <Text style={[styles.rowDesc, { color: colors.textMuted }]}>
                     Contribuer à enrichir cette bibliothèque
@@ -406,14 +406,14 @@ export default function SettingsScreen() {
             <TouchableOpacity style={styles.row} activeOpacity={0.75}>
               <View style={styles.rowLeft}>
                 <Info size={18} color={accent} />
-                <Text style={[styles.rowTitle, { color: colors.textSecondary }]}>À propos de Nour</Text>
+                <Text style={[styles.rowTitle, { color: colors.textSecondary }]}>À propos de Charif</Text>
               </View>
               <ChevronRight size={16} color={colors.textMuted} />
             </TouchableOpacity>
           </View>
 
           <View style={styles.footer}>
-            <Text style={[styles.footerArabic, { color: colors.textMuted }]}>نور</Text>
+            <Text style={[styles.footerArabic, { color: colors.textMuted }]}>Charif</Text>
             <Text style={[styles.footerText, { color: colors.textMuted }]}>Version 2.0.0</Text>
             <Text style={[styles.footerTagline, { color: colors.textMuted }]}>Lumière, sagesse et sérénité — chaque jour.</Text>
           </View>

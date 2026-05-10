@@ -48,7 +48,7 @@ export interface Translations {
   language: string;
   interfaceLanguage: string;
   about: string;
-  aboutNour: string;
+  aboutCharif: string;
   version: string;
   tagline: string;
   save: string;
@@ -129,7 +129,7 @@ const FR: Translations = {
   notifications: 'NOTIFICATIONS', dailyWisdom: 'Sagesse quotidienne',
   receiveDaily: 'Recevez une sagesse chaque jour', sendTime: "Heure d'envoi", notifTheme: 'Thème des notifications',
   random: 'Aléatoire', visualTheme: 'THÈME VISUEL', language: 'LANGUE', interfaceLanguage: "Langue de l'interface",
-  about: 'À PROPOS', aboutNour: 'À propos de Nour', version: 'Version 2.0.0',
+  about: 'À PROPOS', aboutCharif: 'À propos de Charif', version: 'Version 2.0.0',
   tagline: 'Lumière, sagesse et sérénité — chaque jour.',
   save: 'Sauver',
   themeDark: 'Nuit', themeLight: 'Lumière', themeSepia: 'Sépia',
@@ -146,8 +146,8 @@ const FR: Translations = {
   playRecitation: 'Écouter la récitation', playTranslation: 'Écouter la traduction',
   shareCard: 'Partager', wallpaper: 'Fond d\'écran', shareCardTitle: 'Partager', wallpaperTitle: "Fond d'écran",
   preview: 'APERÇU', shareBtn: 'Partager', savePhotos: 'Enregistrer dans Photos',
-  premiumTitle: 'Nour Premium', premiumDesc: 'Débloquez toutes les sagesses', premiumSee: 'Voir',
-  premiumActive: 'Nour Premium actif',
+  premiumTitle: 'Charif Premium', premiumDesc: 'Débloquez toutes les sagesses', premiumSee: 'Voir',
+  premiumActive: 'Charif Premium actif',
   daysOf: 'jours de', days: 'jours', day: 'jour',
 };
 
@@ -167,7 +167,7 @@ const EN: Translations = {
   notifications: 'NOTIFICATIONS', dailyWisdom: 'Daily wisdom',
   receiveDaily: 'Receive a wisdom every day', sendTime: 'Send time', notifTheme: 'Notification theme',
   random: 'Random', visualTheme: 'VISUAL THEME', language: 'LANGUAGE', interfaceLanguage: 'Interface language',
-  about: 'ABOUT', aboutNour: 'About Nour', version: 'Version 2.0.0',
+  about: 'ABOUT', aboutCharif: 'About Charif', version: 'Version 2.0.0',
   tagline: 'Light, wisdom and serenity — every day.',
   save: 'Save',
   themeDark: 'Night', themeLight: 'Light', themeSepia: 'Sepia',
@@ -184,8 +184,8 @@ const EN: Translations = {
   playRecitation: 'Listen to recitation', playTranslation: 'Listen to translation',
   shareCard: 'Share', wallpaper: 'Wallpaper', shareCardTitle: 'Share', wallpaperTitle: 'Wallpaper',
   preview: 'PREVIEW', shareBtn: 'Share', savePhotos: 'Save to Photos',
-  premiumTitle: 'Nour Premium', premiumDesc: 'Unlock all wisdoms', premiumSee: 'View',
-  premiumActive: 'Nour Premium active',
+  premiumTitle: 'Charif Premium', premiumDesc: 'Unlock all wisdoms', premiumSee: 'View',
+  premiumActive: 'Charif Premium active',
   daysOf: 'days of', days: 'days', day: 'day',
 };
 
@@ -205,7 +205,7 @@ const AR: Translations = {
   notifications: 'الإشعارات', dailyWisdom: 'الحكمة اليومية',
   receiveDaily: 'استقبل حكمة كل يوم', sendTime: 'وقت الإرسال', notifTheme: 'موضوع الإشعارات',
   random: 'عشوائي', visualTheme: 'المظهر البصري', language: 'اللغة', interfaceLanguage: 'لغة الواجهة',
-  about: 'حول التطبيق', aboutNour: 'حول تطبيق نور', version: 'الإصدار ٢.٠.٠',
+  about: 'حول التطبيق', aboutCharif: 'حول تطبيق Charif', version: 'الإصدار ٢.٠.٠',
   tagline: 'نور وحكمة وسكينة — كل يوم.',
   save: 'حفظ',
   themeDark: 'ليل', themeLight: 'نور', themeSepia: 'قديم',
@@ -222,8 +222,8 @@ const AR: Translations = {
   playRecitation: 'استمع إلى التلاوة', playTranslation: 'استمع إلى الترجمة',
   shareCard: 'مشاركة', wallpaper: 'خلفية الشاشة', shareCardTitle: 'مشاركة', wallpaperTitle: 'خلفية الشاشة',
   preview: 'معاينة', shareBtn: 'مشاركة', savePhotos: 'حفظ في الصور',
-  premiumTitle: 'نور المميز', premiumDesc: 'افتح جميع الحكم', premiumSee: 'عرض',
-  premiumActive: 'نور المميز مفعّل',
+  premiumTitle: 'Charif المميز', premiumDesc: 'افتح جميع الحكم', premiumSee: 'عرض',
+  premiumActive: 'Charif المميز مفعّل',
   daysOf: 'أيام من', days: 'أيام', day: 'يوم',
 };
 
@@ -243,7 +243,7 @@ const TR: Translations = {
   notifications: 'BİLDİRİMLER', dailyWisdom: 'Günlük hikmet',
   receiveDaily: 'Her gün bir hikmet alın', sendTime: 'Gönderim zamanı', notifTheme: 'Bildirim teması',
   random: 'Rastgele', visualTheme: 'GÖRSEL TEMA', language: 'DİL', interfaceLanguage: 'Arayüz dili',
-  about: 'HAKKINDA', aboutNour: "Nour hakkında", version: 'Sürüm 2.0.0',
+  about: 'HAKKINDA', aboutCharif: "Charif hakkında", version: 'Sürüm 2.0.0',
   tagline: 'Işık, hikmet ve huzur — her gün.',
   save: 'Kaydet',
   themeDark: 'Gece', themeLight: 'Işık', themeSepia: 'Sepya',
@@ -260,8 +260,8 @@ const TR: Translations = {
   playRecitation: 'Tilaveti dinle', playTranslation: 'Çeviriyi dinle',
   shareCard: 'Paylaş', wallpaper: 'Duvar kağıdı', shareCardTitle: 'Paylaş', wallpaperTitle: 'Duvar kağıdı',
   preview: 'ÖNİZLEME', shareBtn: 'Paylaş', savePhotos: "Fotoğraflara kaydet",
-  premiumTitle: 'Nour Premium', premiumDesc: 'Tüm hikmetlerin kilidini aç', premiumSee: 'Gör',
-  premiumActive: 'Nour Premium aktif',
+  premiumTitle: 'Charif Premium', premiumDesc: 'Tüm hikmetlerin kilidini aç', premiumSee: 'Gör',
+  premiumActive: 'Charif Premium aktif',
   daysOf: 'günlük', days: 'gün', day: 'gün',
 };
 
@@ -281,7 +281,7 @@ const UR: Translations = {
   notifications: 'اطلاعات', dailyWisdom: 'روزانہ حکمت',
   receiveDaily: 'روزانہ ایک حکمت حاصل کریں', sendTime: 'بھیجنے کا وقت', notifTheme: 'اطلاع کا موضوع',
   random: 'بے ترتیب', visualTheme: 'بصری تھیم', language: 'زبان', interfaceLanguage: 'انٹرفیس زبان',
-  about: 'کے بارے میں', aboutNour: 'نور کے بارے میں', version: 'ورژن 2.0.0',
+  about: 'کے بارے میں', aboutCharif: 'نور کے بارے میں', version: 'ورژن 2.0.0',
   tagline: 'روشنی، حکمت اور سکون — ہر روز۔',
   save: 'محفوظ کریں',
   themeDark: 'رات', themeLight: 'روشنی', themeSepia: 'سیپیا',
@@ -298,8 +298,8 @@ const UR: Translations = {
   playRecitation: 'تلاوت سنیں', playTranslation: 'ترجمہ سنیں',
   shareCard: 'شیئر کریں', wallpaper: 'وال پیپر', shareCardTitle: 'شیئر کریں', wallpaperTitle: 'وال پیپر',
   preview: 'پیش نظارہ', shareBtn: 'شیئر کریں', savePhotos: 'تصاویر میں محفوظ کریں',
-  premiumTitle: 'نور پریمیم', premiumDesc: 'تمام حکمتیں انلاک کریں', premiumSee: 'دیکھیں',
-  premiumActive: 'نور پریمیم فعال',
+  premiumTitle: 'Charif پریمیم', premiumDesc: 'تمام حکمتیں انلاک کریں', premiumSee: 'دیکھیں',
+  premiumActive: 'Charif پریمیم فعال',
   daysOf: 'دن کی', days: 'دن', day: 'دن',
 };
 

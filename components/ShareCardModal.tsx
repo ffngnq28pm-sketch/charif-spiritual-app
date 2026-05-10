@@ -28,7 +28,7 @@ export function ShareCardModal({ visible, card, onClose }: Props) {
   async function handleShareText() {
     try {
       await Share.share({
-        message: `${card.arabic}\n\n"${card.french}"\n— ${card.source}\n\n"${card.philosophy}"\n— ${card.philosophyAuthor}\n\n✦ Nour · نور`,
+        message: `${card.arabic}\n\n"${card.french}"\n— ${card.source}\n\n"${card.philosophy}"\n— ${card.philosophyAuthor}\n\n✦ Charif`,
       });
     } catch {
       // ignore
@@ -115,7 +115,7 @@ export function ShareCardModal({ visible, card, onClose }: Props) {
 
             {/* Watermark */}
             <View style={styles.watermark}>
-              <Text style={styles.watermarkText}>نور · Nour</Text>
+              <Text style={styles.watermarkText}>Charif</Text>
             </View>
           </View>
 

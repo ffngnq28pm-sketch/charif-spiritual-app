@@ -84,7 +84,7 @@ export function PremiumPaywall({ visible, onClose }: Props) {
             </TouchableOpacity>
             <View style={styles.badge}>
               <Star size={11} color="#C9A84C" fill="#C9A84C" />
-              <Text style={styles.badgeText}>NOUR PREMIUM</Text>
+              <Text style={styles.badgeText}>CHARIF PREMIUM</Text>
             </View>
             <Text style={styles.headline}>Éveille ta lumière{'\n'}intérieure</Text>
           </View>
@@ -169,7 +169,7 @@ export function PremiumPaywall({ visible, onClose }: Props) {
                 <Text style={styles.ctaText}>
                   {plan === 'lifetime'
                     ? 'Débloquer tout à vie — 39,99€'
-                    : 'Rejoindre Nour Premium — 4,99€ / mois'}
+                    : 'Rejoindre Charif Premium — 4,99€ / mois'}
                 </Text>
               )}
             </LinearGradient>

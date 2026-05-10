@@ -71,8 +71,8 @@ export default function OnboardingScreen() {
 
       {/* Header ornament */}
       <View style={styles.topOrnament}>
-        <Text style={styles.arabicLogo}>نور</Text>
-        <Text style={styles.logoSub}>Nour</Text>
+        <Text style={styles.arabicLogo}>Charif</Text>
+        <Text style={styles.logoSub}>Charif</Text>
       </View>
 
       <ScrollView contentContainerStyle={styles.scroll} showsVerticalScrollIndicator={false}>
