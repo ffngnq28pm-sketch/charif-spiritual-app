@@ -1,0 +1,643 @@
+export interface PathDay {
+  dayNum: number;
+  title: string;
+  practice: string;
+  scripture?: string;
+}
+
+export interface WeeklyPath {
+  id: string;
+  title: string;
+  subtitle: string;
+  emoji: string;
+  durationDays: number;
+  premium: boolean;
+  days: PathDay[];
+}
+
+export const WEEKLY_PATHS: WeeklyPath[] = [
+  {
+    id: 'path-dhikr',
+    title: '7 jours de Dhikr',
+    subtitle: 'S\'initier au rappel d\'Allah au quotidien',
+    emoji: '📿',
+    durationDays: 7,
+    premium: false,
+    days: [
+      {
+        dayNum: 1,
+        title: 'SubhanAllah',
+        practice: 'Répète SubhanAllah 100 fois dans la journée, réparties en petites sessions. Au réveil, pendant les déplacements, à la pause déjeuner. Compte sur tes doigts ou un chapelet.',
+        scripture: '"Deux paroles légères sur la langue, lourdes dans la balance : SubhanAllahi wa bihamdih, SubhanAllahi l-adhim." (Bukhari)',
+      },
+      {
+        dayNum: 2,
+        title: 'Alhamdulillah',
+        practice: 'Aujourd\'hui, dis Alhamdulillah après chaque bienfait que tu remarques — un repas, un sourire, un rayon de soleil. Vise 100 fois minimum. Tiens un compte mental des bienfaits d\'Allah.',
+        scripture: '"Si vous êtes reconnaissants, J\'augmenterai certes vos bienfaits." (14:7)',
+      },
+      {
+        dayNum: 3,
+        title: 'Allahu Akbar',
+        practice: 'Répète Allahu Akbar 100 fois en méditant le sens : Allah est le Plus Grand — plus grand que ma peur, mon stress, mes problèmes. Dis-le particulièrement face aux défis du jour.',
+        scripture: '"Célèbre les louanges de ton Seigneur et sois parmi ceux qui se prosternent." (15:98)',
+      },
+      {
+        dayNum: 4,
+        title: 'La ilaha illallah',
+        practice: 'Répète la shahâda 100 fois lentement et consciemment. Sens chaque mot : il n\'y a PAS de dieu — puis — SAUF Allah. Laisse chaque répétition renforcer ta certitude en l\'Unicité divine.',
+        scripture: '"Sache donc qu\'il n\'y a de dieu qu\'Allah." (47:19)',
+      },
+      {
+        dayNum: 5,
+        title: 'Astaghfirullah',
+        practice: 'Pratique l\'istighfar 100 fois aujourd\'hui. Commence par les grandes fautes connues, puis les petites, puis ce dont tu n\'es pas conscient. Termine par le Sayyid ul-Istighfar une fois.',
+        scripture: '"Demandez pardon à votre Seigneur, Il est Très Pardonneur." (71:10)',
+      },
+      {
+        dayNum: 6,
+        title: 'La hawla wa la quwwata illa billah',
+        practice: 'Ce dhikr — "Il n\'y a de force ni de puissance qu\'en Allah" — est le trésor du Paradis. Répète-le 100 fois, particulièrement face aux tâches difficiles de la journée. Laisse-le remplacer l\'anxiété.',
+        scripture: '"Puis lorsque tu es résolu, fais confiance à Allah." (3:159)',
+      },
+      {
+        dayNum: 7,
+        title: 'Le Tasbih complet',
+        practice: 'Le dhikr ultime : 33 SubhanAllah, 33 Alhamdulillah, 33 Allahu Akbar, puis Lâ ilâha illallâhu wahdahu... Fais ce cycle 3 fois dans la journée : au matin, au midi et au soir. C\'est la pratique prophétique complète.',
+        scripture: '"Certes, dans le rappel d\'Allah les cœurs trouvent leur quiétude." (13:28)',
+      },
+    ],
+  },
+  {
+    id: 'path-fatiha',
+    title: 'Parcours Al-Fatiha',
+    subtitle: 'Comprendre profondément la Mère du Livre',
+    emoji: '📖',
+    durationDays: 7,
+    premium: false,
+    days: [
+      {
+        dayNum: 1,
+        title: 'Bismillah — L\'Ouverture',
+        practice: 'Médite sur la Basmala de la Fatiha. Commence chaque action d\'aujourd\'hui par Bismillah avec conscience. Le soir, réfléchis : dans quelles actions as-tu oublié de le dire ? Quelles différences d\'intention as-tu remarquées ?',
+        scripture: '"Au nom d\'Allah, le Tout Miséricordieux, le Très Miséricordieux."',
+      },
+      {
+        dayNum: 2,
+        title: 'Alhamdulillah — La Louange totale',
+        practice: 'Médite sur "Alhamdulillahi rabbi l-\'alamin" — la louange appartient à Allah, Seigneur des mondes. Fais une liste de 30 bienfaits spécifiques d\'Allah dans ta vie et loue-Le pour chacun. La gratitude est une porte de lumière.',
+        scripture: '"Toute louange appartient à Allah, Seigneur des mondes."',
+      },
+      {
+        dayNum: 3,
+        title: 'Ar-Rahman Ar-Rahim — La Miséricorde',
+        practice: 'Médite sur les deux attributs de miséricorde. Comment as-tu expérimenté la miséricorde universelle d\'Allah (Ar-Rahman) et Sa miséricorde spéciale pour les croyants (Ar-Rahim) dans ta vie ? Exprime-le à Allah dans une duaa.',
+        scripture: '"Le Tout Miséricordieux, le Très Miséricordieux."',
+      },
+      {
+        dayNum: 4,
+        title: 'Maliki Yawmiddin — Le Jour du Jugement',
+        practice: 'Médite sur "Maître du Jour du Jugement." Pense à tes actions de la semaine passée sous cet angle. Y en a-t-il que tu souhaiterais changer ? Fais Tawbah sincère et planifie des améliorations concrètes.',
+        scripture: '"Maître du Jour de la Rétribution."',
+      },
+      {
+        dayNum: 5,
+        title: 'Iyyaka na\'budu — L\'Adoration exclusive',
+        practice: 'Médite sur "C\'est Toi seul que nous adorons." Examine tes motivations dans tes actes d\'aujourd\'hui. Y a-t-il des choses que tu fais davantage pour les gens que pour Allah ? Pratique l\'ikhlas (sincérité pure) toute la journée.',
+        scripture: '"C\'est Toi [seul] que nous adorons, et c\'est Toi [seul] dont nous implorons l\'aide."',
+      },
+      {
+        dayNum: 6,
+        title: 'Ihdinassiratal mustaqim — Le Chemin droit',
+        practice: 'Médite sur la demande du droit chemin — que tu la répètes au minimum 17 fois par jour. Réfléchis : dans quel domaine de ta vie as-tu le plus besoin d\'être guidé vers le chemin droit ? Fais une duaa personnelle sincère pour cela.',
+        scripture: '"Guide-nous dans le droit chemin."',
+      },
+      {
+        dayNum: 7,
+        title: 'Al-Fatiha complète — Le Dialogue',
+        practice: 'Récite Al-Fatiha 17 fois (le nombre de prières quotidiennes) en imaginant le dialogue avec Allah décrit dans le hadith qudsi. Pour chaque verset, laisse une pause et imagine la réponse d\'Allah. C\'est la prière la plus complète.',
+        scripture: '"J\'ai partagé la prière entre Moi et Mon serviteur en deux moitiés." (Hadith Qudsi)',
+      },
+    ],
+  },
+  {
+    id: 'path-allah-names',
+    title: 'Noms d\'Allah',
+    subtitle: 'Vivre avec un Beau Nom d\'Allah par jour',
+    emoji: '✨',
+    durationDays: 7,
+    premium: false,
+    days: [
+      {
+        dayNum: 1,
+        title: 'Ar-Rahman — Le Tout Miséricordieux',
+        practice: 'Commence ta journée avec "Yâ Rahman" 100 fois. Cherche aujourd\'hui 10 preuves de la miséricorde universelle d\'Allah dans ta journée — dans la nature, dans les relations, dans ton corps. La miséricorde divine est partout.',
+        scripture: '"Le Tout Miséricordieux S\'est établi sur le Trône." (20:5)',
+      },
+      {
+        dayNum: 2,
+        title: 'Al-Hayy Al-Qayyum — Le Vivant Subsistant',
+        practice: 'Répète "Yâ Hayyu Yâ Qayyûm" 100 fois le matin. Ces deux noms combinés sont recommandés pour les situations difficiles. Le Prophète ﷺ recommandait cette invocation pour la clarté mentale et spirituelle.',
+        scripture: '"Allah — il n\'est de dieu que Lui, le Vivant, le Subsistant." (2:255)',
+      },
+      {
+        dayNum: 3,
+        title: 'Al-Wadud — Le Très Aimant',
+        practice: 'Médite sur le fait qu\'Allah t\'aime, toi personnellement. Répète "Yâ Wadûd" 100 fois et après chaque série de 10, dis "Allâhumma inni uhibbuka" — O Allah, je T\'aime. Laisse cet amour transformer tes actes d\'aujourd\'hui.',
+        scripture: '"Il est le Très Pardonnant, le Très Aimant." (85:14)',
+      },
+      {
+        dayNum: 4,
+        title: 'Al-Fattah — Celui qui ouvre',
+        practice: 'Al-Fattah ouvre les portes fermées — les cœurs, les opportunités, les solutions. Récite "Yâ Fattâh" 71 fois et fais duaa pour qu\'Allah ouvre une porte spécifique dans ta vie. Confie Lui tes blocages avec yaqin.',
+        scripture: '"C\'est Allah qui ouvre les portes de Sa miséricorde pour les gens." (35:2)',
+      },
+      {
+        dayNum: 5,
+        title: 'Al-Ghafur — Le Très Pardonnant',
+        practice: 'Allah pardonne même les péchés les plus grands à qui se repent sincèrement. Récite "Yâ Ghafûr" 100 fois. Fais Tawbah pour une faute qui te pèse. Puis visualise que ton péché est effacé — car Allah l\'a promis.',
+        scripture: '"Ton Seigneur accorde amplement le pardon." (53:32)',
+      },
+      {
+        dayNum: 6,
+        title: 'Al-Latif — Le Subtil Bienveillant',
+        practice: 'Al-Latif prend soin de toi de manières invisibles — des provisions inattendues, des protections dont tu n\'es pas conscient, des grâces cachées. Récite "Yâ Latîf" 133 fois et cherche aujourd\'hui ces petites grâces discrètes d\'Allah.',
+        scripture: '"Allah est Subtil (Doux) envers Ses serviteurs." (42:19)',
+      },
+      {
+        dayNum: 7,
+        title: 'Al-Quddus — Le Très Saint',
+        practice: 'Al-Quddus est pur de tout défaut et imperfection. En méditant ce Nom, réfléchis à comment purifier ton intérieur. Récite "Yâ Quddûs" 100 fois puis fais une prière de purification du cœur. La pureté spirituelle est une aspiration permanente.',
+        scripture: '"Il est Allah, en dehors de Qui il n\'y a pas de dieu ; le Souverain, le Très Saint." (59:23)',
+      },
+    ],
+  },
+  {
+    id: 'path-purification',
+    title: 'Purification du cœur',
+    subtitle: 'Tazkiyat an-nafs, le voyage intérieur',
+    emoji: '💎',
+    durationDays: 7,
+    premium: true,
+    days: [
+      {
+        dayNum: 1,
+        title: 'Diagnostic spirituel',
+        practice: 'Identifie les "maladies du cœur" présentes en toi : orgueil, envie, colère, avarice, amour excessif du monde. Sois honnête. Fais une liste et classe-les par intensité. C\'est le point de départ de toute guérison spirituelle.',
+        scripture: '"Le Jour où ni richesses ni enfants ne seront utiles, si ce n\'est celui qui vient à Allah avec un cœur sain." (26:88-89)',
+      },
+      {
+        dayNum: 2,
+        title: 'Tawbah profonde',
+        practice: 'Pour chaque maladie identifiée hier, fais une Tawbah spécifique. Ne te contente pas de "Astaghfirullah" général — nomme le péché, exprime ton regret sincère, prends un engagement précis de changement. Puis fais 2 rak\'ah de salat at-tawbah.',
+        scripture: '"Allah aime ceux qui se repentent souvent et aime ceux qui se purifient." (2:222)',
+      },
+      {
+        dayNum: 3,
+        title: 'Muraqaba — La Vigilance',
+        practice: 'Prends conscience aujourd\'hui de chaque pensée et sentiment négatif qui surgit. Ne les juge pas — observe-les et rappelle-toi qu\'Allah les voit. Pratique le muraqaba actif : à chaque heure, rappelle-toi "Allah me voit en ce moment."',
+        scripture: '"Allah sait ce que vous avez dans les cœurs." (5:7)',
+      },
+      {
+        dayNum: 4,
+        title: 'Qalb Salim — Le cœur sain',
+        practice: 'Le cœur sain (qalb salim) est libre de tout sauf Allah. Médite : qu\'est-ce qui remplit ton cœur en ce moment ? Quels attachements t\'empêchent d\'être entièrement avec Allah ? Fais le dhikr "Yâ Muqallibal-qulûb, thabbit qalbî \'alâ dînik" 33 fois.',
+        scripture: '"Certes, dans le rappel d\'Allah les cœurs trouvent leur quiétude." (13:28)',
+      },
+      {
+        dayNum: 5,
+        title: 'Khushu dans la salât',
+        practice: 'Accomplis aujourd\'hui une seule salat avec une présence totale — mets de côté 20 minutes. Avant de commencer, pense : "Je me tiens devant Allah." Lis les versets lentement. Dans le ruku\' et le sujud, fais duaa de ton cœur.',
+        scripture: '"Les croyants ont certes réussi : ceux qui sont humbles dans leurs Salats." (23:1-2)',
+      },
+      {
+        dayNum: 6,
+        title: 'Purification par la parole',
+        practice: 'La langue est le miroir du cœur. Aujourd\'hui, observe chaque parole que tu prononces. Pas de médisance (ghiba), pas de mensonge, pas de mots inutiles. Remplace les paroles vaines par du dhikr. Le silence est parfois la meilleure parole.',
+        scripture: '"Que celui qui croit en Allah et au Jour Dernier parle bien ou se taise." (Bukhari)',
+      },
+      {
+        dayNum: 7,
+        title: 'Bilan et Renouvellement',
+        practice: 'Reviens sur les 6 jours. Qu\'as-tu découvert sur ton cœur ? Quels progrès as-tu faits ? Quels combats restent à mener ? Écris une lettre à ton futur toi dans 30 jours avec tes engagements de purification. Commence un journal spirituel hebdomadaire.',
+        scripture: '"Ô vous qui croyez ! Craignez Allah, que chaque âme regarde ce qu\'elle a accompli pour demain." (59:18)',
+      },
+    ],
+  },
+  {
+    id: 'path-sifat-allah',
+    title: 'Sifat Allah',
+    subtitle: 'Vivre 7 jours immergé dans les Attributs divins',
+    emoji: '🌟',
+    durationDays: 7,
+    premium: true,
+    days: [
+      {
+        dayNum: 1,
+        title: 'Al-Hayy Al-Qayyum — Vie et Subsistance',
+        practice: 'Allah est le seul Vivant qui ne meurt pas, le seul Subsistant sans besoin. Médite : tout ce qui vit dépend de Lui. Ton cœur bat par Sa volonté en ce moment. Répète "Yâ Hayyu Yâ Qayyûm" 300 fois en pensant à cette dépendance totale et apaisante.',
+        scripture: '"Allah — il n\'est de dieu que Lui, le Vivant, le Subsistant. Ni somnolence ni sommeil ne Le saisissent." (2:255)',
+      },
+      {
+        dayNum: 2,
+        title: 'Al-\'Alim Al-Khabir — Science et Connaissance intime',
+        practice: 'Allah connaît tout ce que tu penses, ressens, gardes secret. Ce n\'est pas pour t\'effrayer — c\'est pour te rassurer. Rien de ce que tu vis ne Lui échappe. Répète "Yâ \'Alîm Yâ Khabîr" 100 fois et confie à Allah ce que tu n\'oses pas dire aux autres.',
+        scripture: '"Il connaît la trahison des yeux et ce que les poitrines cachent." (40:19)',
+      },
+      {
+        dayNum: 3,
+        title: 'Al-Qadir Al-Muqtadir — Toute-Puissance',
+        practice: 'Allah peut tout — sans effort, sans aide, sans limite. Répète "Yâ Qadîr Yâ Muqtadir" 100 fois. Fais ensuite duaa pour quelque chose que tu crois impossible. Pour Allah, rien n\'est impossible — "Kun fayakûn" — Il dit "Sois!" et cela est.',
+        scripture: '"Il n\'est rien pour Allah de difficile." (2:20)',
+      },
+      {
+        dayNum: 4,
+        title: 'Al-Ghafur Ar-Rahim — Pardon et Miséricorde',
+        practice: 'Ces deux Noms sont les plus fréquents dans le Coran. Allah pardonne les péchés grands et petits, anciens et récents. Répète "Yâ Ghafûr Yâ Rahîm" 100 fois et visualise tes péchés être effacés un par un, remplacés par de la lumière.',
+        scripture: '"Dis : Ô Mes serviteurs qui avez commis des excès, ne désespérez pas de la miséricorde d\'Allah." (39:53)',
+      },
+      {
+        dayNum: 5,
+        title: 'As-Sami\' Al-Basir — Entendant et Voyant',
+        practice: 'Allah entend chaque duaa, chaque larme silencieuse, chaque soupir du cœur. Il voit chaque effort secret pour Lui plaire. Répète "Yâ Samî\' Yâ Basîr" 100 fois et vis aujourd\'hui comme si tu sentais ces deux regards divins bienveillants sur toi.',
+        scripture: '"Il est l\'Entendant, le Voyant." (42:11)',
+      },
+      {
+        dayNum: 6,
+        title: 'Al-Wadud Al-Karim — Amour et Générosité',
+        practice: 'Allah t\'aime avec un amour parfait et Il est le plus Généreux. Sa générosité n\'a pas de limite — Il donne sans que cela ne Le diminue. Répète "Yâ Wadûd Yâ Karîm" 100 fois et réfléchis à comment ces Noms appellent à l\'amour et la générosité en toi aussi.',
+        scripture: '"Et votre Seigneur est le Riche (de toute richesse), le Possesseur de miséricorde." (6:133)',
+      },
+      {
+        dayNum: 7,
+        title: 'Al-Awwal Al-Akhir — Le Premier et le Dernier',
+        practice: 'Allah est avant toute chose et après toute chose. Il sera là quand tout aura disparu. Répète 4 Noms : "Huwa l-Awwalu wa l-Âkhiru wa dh-Dhâhiru wa l-Bâtin" 100 fois. Médite l\'éternité divine face à la temporalité de tout le reste.',
+        scripture: '"Il est le Premier et le Dernier, l\'Apparent et le Caché." (57:3)',
+      },
+    ],
+  },
+  {
+    id: 'path-tawhid',
+    title: 'Chemin du Tawhid',
+    subtitle: 'Approfondir l\'Unicité d\'Allah au quotidien',
+    emoji: '☪️',
+    durationDays: 7,
+    premium: true,
+    days: [
+      {
+        dayNum: 1,
+        title: 'Tawhid Rububiyyah',
+        practice: 'Allah est le seul Créateur, le seul Pourvoyeur, le seul Gouverneur de l\'univers. Observe aujourd\'hui les preuves de Sa Seigneurie dans la nature : le lever du soleil, la croissance des plantes, le corps humain. Dis "Allahu Akbar" à chaque preuve.',
+        scripture: '"Dis : Qui vous accorde votre subsistance du ciel et de la terre ? Qui détient l\'ouïe et la vue ?" (10:31)',
+      },
+      {
+        dayNum: 2,
+        title: 'Tawhid Uluhiyyah',
+        practice: 'Seul Allah mérite l\'adoration. Examine aujourd\'hui : y a-t-il des créatures, des désirs, des opinions humaines que tu "adores" en pratique (en leur obéissant contre Allah) ? L\'ikhlas total est un travail de toute une vie.',
+        scripture: '"Et ils n\'ont reçu l\'ordre que d\'adorer Allah, Lui vouant un culte sincère." (98:5)',
+      },
+      {
+        dayNum: 3,
+        title: 'La shahâda en profondeur',
+        practice: 'Médite chaque partie de "Lâ ilâha illallâh Muhammad rasûlullâh." Récite-la 100 fois avec une conscience totale du sens. Puis réfléchis : est-ce que je vis vraiment selon cette déclaration dans chaque aspect de ma vie ?',
+        scripture: '"Sache donc qu\'il n\'est pas d\'autre dieu qu\'Allah." (47:19)',
+      },
+      {
+        dayNum: 4,
+        title: 'Fuir le Shirk subtil',
+        practice: 'Le Riya (ostentation) est un shirk subtil — faire des actes pieux pour être vu des hommes. Aujourd\'hui, fais un acte de dévotion complètement secret (prière nawafil, sadaqa anonyme). Ressens la différence de pureté intérieure.',
+        scripture: '"Celui qui désire la rencontre de son Seigneur, qu\'il fasse de bonnes œuvres et n\'associe dans l\'adoration de son Seigneur aucun autre." (18:110)',
+      },
+      {
+        dayNum: 5,
+        title: 'Tawhid dans les épreuves',
+        practice: 'Face à une épreuve, le Tawhid dit : "Allah a décrété ceci, et Son décret est parfait." Médite sur une difficulté actuelle à travers le prisme du Tawhid. Fais "Innâ lillâhi wa innâ ilayhi râji\'ûn" 33 fois et remets cette épreuve à Allah.',
+        scripture: '"Nous appartenons à Allah, et c\'est vers Lui que nous retournerons." (2:156)',
+      },
+      {
+        dayNum: 6,
+        title: 'Tawhid des Noms et Attributs',
+        practice: 'Allah est décrit exactement comme Il Se décrit dans le Coran et la Sunnah, sans dénaturation ni anthropomorphisme. Médite sur 5 attributs divins que tu connais et réfléchis à comment ils diffèrent de leurs équivalents humains imparfaits.',
+        scripture: '"Il n\'y a rien de semblable à Lui." (42:11)',
+      },
+      {
+        dayNum: 7,
+        title: 'Vivre le Tawhid',
+        practice: 'Le Tawhid n\'est pas qu\'une théologie — c\'est un mode de vie. Récite "Lâ ilâha illallâh" 300 fois aujourd\'hui, distribuées dans ta journée. Engage-toi à vérifier chaque semaine : est-ce que mes actions sont en accord avec ma shahâda ?',
+        scripture: '"O vous qui croyez ! Craignez Allah comme Il doit être craint, et ne mourez qu\'en étant soumis." (3:102)',
+      },
+    ],
+  },
+  {
+    id: 'path-quranic',
+    title: 'Méditations coraniques',
+    subtitle: 'Laisser le Coran parler à ton cœur',
+    emoji: '📚',
+    durationDays: 7,
+    premium: true,
+    days: [
+      {
+        dayNum: 1,
+        title: 'Tartil — La belle récitation',
+        practice: 'Récite aujourd\'hui une seule page du Coran mais très lentement, avec tajwid. L\'objectif n\'est pas la quantité mais la présence. S\'arrêter sur un verset, le répéter, laisser Allah te parler à travers Ses mots.',
+        scripture: '"Récite le Coran lentement et distinctement." (73:4)',
+      },
+      {
+        dayNum: 2,
+        title: 'Tadabbur — La contemplation',
+        practice: 'Choisis un verset qui t\'a touché récemment. Lis son tafsir (explication). Réfléchis : comment ce verset s\'applique à ma vie maintenant ? Qu\'est-ce qu\'Allah veut me dire à travers lui aujourd\'hui ?',
+        scripture: '"Ne méditent-ils pas sur le Coran ? Ou y a-t-il des serrures sur les cœurs ?" (47:24)',
+      },
+      {
+        dayNum: 3,
+        title: 'Les Versets de réconfort',
+        practice: 'Mémorise aujourd\'hui le verset de La Inshirah (94:5-6) : "Car avec la difficulté vient la facilité, avec la difficulté vient certes la facilité." Répète-le 33 fois face à tes défis du jour. Le Coran est une guérison pour les cœurs (17:82).',
+        scripture: '"Car avec la difficulté vient la facilité." (94:5)',
+      },
+      {
+        dayNum: 4,
+        title: 'Coran et action',
+        practice: 'Lis Surah Al-\'Asr (103). Ce petit chapitre résume toute la condition humaine : le temps qui s\'échappe, la foi, les bonnes actions, la vérité, la patience. Réfléchis à comment ta vie reflète ces 4 conditions du succès selon Allah.',
+        scripture: '"Par le temps ! L\'homme est certes en perdition." (103:1-2)',
+      },
+      {
+        dayNum: 5,
+        title: 'Les Duaa coraniques',
+        practice: 'Le Coran contient des duaa d\'une beauté et d\'une profondeur incomparables. Pratique aujourd\'hui la duaa d\'Ibrahim (2:286), d\'Ayyub (21:83), et la duaa de Surah Al-Baqara (2:286). Ces supplications des prophètes sont agréées.',
+        scripture: '"Seigneur, ne nous punis pas si nous oublions ou si nous commettons des fautes..." (2:286)',
+      },
+      {
+        dayNum: 6,
+        title: 'Hifdh — La mémorisation comme \'ibadah',
+        practice: 'Mémorise ou renforce une sourate courte aujourd\'hui (Al-Fil, Al-Humazah, At-Takathur). La mémorisation du Coran est une \'ibadah — chaque lettre vaut 10 bonnes actions (hadith). Récite-la en prière ce soir.',
+        scripture: '"Ceux qui récitent le Livre d\'Allah, accomplissent la Salat et dépensent... espèrent un commerce qui ne périra point." (35:29)',
+      },
+      {
+        dayNum: 7,
+        title: 'Coran comme guide de vie',
+        practice: 'Le Coran est "un guide pour les humains" (2:185). Choisis un domaine de ta vie (famille, travail, relations) et cherche ce que le Coran dit à ce sujet. Lis les versets concernés et établis un plan d\'action basé sur la guidance coranique.',
+        scripture: '"Ce Coran guide vers ce qui est le plus droit." (17:9)',
+      },
+    ],
+  },
+  {
+    id: 'path-prophetic',
+    title: 'Pratique du Prophète ﷺ',
+    subtitle: 'Revivre les Sunnan prophétiques quotidiennes',
+    emoji: '🌙',
+    durationDays: 7,
+    premium: true,
+    days: [
+      {
+        dayNum: 1,
+        title: 'Les Adhkar du Matin',
+        practice: 'Applique intégralement les adhkar du matin du Prophète ﷺ : Ayat al-Kursi, Mu\'awwidhatayn × 3, Sayyid ul-Istighfar, Salawat × 10. Fais-les avant tout téléphone ou réseaux. C\'est la première chose que faisait le Prophète.',
+        scripture: '"En vérité dans le Messager d\'Allah vous avez le plus bel exemple." (33:21)',
+      },
+      {
+        dayNum: 2,
+        title: 'Sunnah de l\'alimentation',
+        practice: 'Mange et bois aujourd\'hui selon la Sunnah : Bismillah au début, mange avec la main droite, commence par les aliments proches, ne souffle pas dans la boisson, dis Alhamdulillah à la fin. Ces gestes simples transforment le repas en \'ibadah.',
+        scripture: '"Le Prophète ﷺ ne mangeait jamais en se penchant et il mangeait ce qui était proche de lui." (Bukhari)',
+      },
+      {
+        dayNum: 3,
+        title: 'Sunnah des relations',
+        practice: 'Le Prophète ﷺ souriait toujours le premier, commençait toujours par le salam, écoutait attentivement, ne coupait jamais la parole. Pratique ces sunnans aujourd\'hui dans chaque interaction. Note comment les gens répondent à cette bienveillance prophétique.',
+        scripture: '"Ton sourire à ton frère est une aumône." (Tirmidhi)',
+      },
+      {
+        dayNum: 4,
+        title: 'Sunnah de la prière',
+        practice: 'Le Prophète ﷺ priait les Rawatib : 2 rak\'ah avant Fajr, 4 avant Dhohr (ou 2), 2 après Dhohr, 2 après Maghrib, 2 après Isha. Ces prières sunnah protègent du feu selon le hadith. Accomplis-les toutes aujourd\'hui.',
+        scripture: '"Quiconque prie 12 rak\'ah sunnah par jour, Allah lui construira une maison au Paradis." (Muslim)',
+      },
+      {
+        dayNum: 5,
+        title: 'Sunnah du vendredi',
+        practice: 'Même si ce n\'est pas vendredi : prends le bain (ghusl), mets ton plus beau vêtement propre, récite Surah Al-Kahf (ou une partie), envoie beaucoup de salawat sur le Prophète ﷺ. Pratique ces sunnans pour te préparer au prochain vendredi.',
+        scripture: '"Le vendredi est le meilleur jour sur lequel le soleil se lève." (Muslim)',
+      },
+      {
+        dayNum: 6,
+        title: 'Sunnah du coucher',
+        practice: 'Adhkar du coucher : Ayat al-Kursi, Mu\'awwidhatayn, Surah Al-Mulk (protection du châtiment de la tombe), puis "Bismika Allâhumma amûtu wa ahyâ." Dors sur le côté droit. Le Prophète dormait ainsi — chaque instant selon la Sunnah est béni.',
+        scripture: '"Lorsqu\'il allait dormir, le Prophète ﷺ rassemblait ses paumes, y soufflait les Mu\'awwidhatayn et s\'essuyait le corps." (Bukhari)',
+      },
+      {
+        dayNum: 7,
+        title: 'La Sunnah comme mode de vie',
+        practice: 'Fais le bilan des 6 jours. Quelle sunnah prophétique t\'a le plus transformé intérieurement ? Engage-toi à en intégrer au moins 3 de manière permanente dans ta vie. La sunnah n\'est pas un fardeau — c\'est un chemin de beauté et de baraka.',
+        scripture: '"Dis : Si vous aimez Allah, suivez-moi, Allah vous aimera et vous pardonnera vos péchés." (3:31)',
+      },
+    ],
+  },
+  {
+    id: 'path-patience',
+    title: 'École de Patience',
+    subtitle: 'Maîtriser le Sabr dans toutes ses dimensions',
+    emoji: '⏳',
+    durationDays: 7,
+    premium: true,
+    days: [
+      {
+        dayNum: 1,
+        title: 'Comprendre le Sabr',
+        practice: 'Étudie les trois types de sabr : dans l\'obéissance, devant les interdits, face aux décrets. Identifie lequel est le plus difficile pour toi. Récite "Innallaha ma\'as-sabirîn" (Allah est avec les patients) 33 fois comme affirmation de Sa présence.',
+        scripture: '"Allah est avec les patients." (2:153)',
+      },
+      {
+        dayNum: 2,
+        title: 'Sabr dans l\'obéissance',
+        practice: 'L\'obéissance demande de la constance contre la paresse. Accomplis aujourd\'hui les 5 prières à leurs horaires exacts, sans délai. La prière Fajr est le test du sabr dans l\'obéissance. Chaque prière accomplie à l\'heure est une victoire du sabr.',
+        scripture: '"Certes, la Salat préserve de la turpitude et du blâmable." (29:45)',
+      },
+      {
+        dayNum: 3,
+        title: 'Sabr devant les tentations',
+        practice: 'Identifie une tentation récurrente dans ta vie. Prépare un plan de réponse islamique : dhikr, ghadd al-basar (baisser le regard), changer d\'environnement, faire wudu. Pratique ce plan activement aujourd\'hui si la tentation se présente.',
+        scripture: '"Et quiconque craint la station de son Seigneur et préserve son âme de la passion, le Paradis sera son séjour." (79:40-41)',
+      },
+      {
+        dayNum: 4,
+        title: 'Sabr dans l\'épreuve',
+        practice: 'Prends une épreuve actuelle et pratique "Al-Inna" : "Innâ lillâhi wa innâ ilayhi râji\'ûn, Allâhumma a\'jurnî fî musîbatî wa akhlif lî khayran minhâ." Répète 33 fois. Le Prophète ﷺ a promis compensation et récompense à celui qui dit cette prière.',
+        scripture: '"Nous vous éprouvons... Donne la bonne nouvelle aux endurants." (2:155-157)',
+      },
+      {
+        dayNum: 5,
+        title: 'Sabr avec les gens',
+        practice: 'La plus grande patience est souvent envers les personnes difficiles. Identifie une personne qui te challenge. Fais duaa pour elle sincèrement (le Prophète ﷺ faisait duaa pour ses ennemis). Pratique la patience relationnelle en l\'évitant avec sagesse si nécessaire.',
+        scripture: '"Repousse [le mal] par ce qui est meilleur : et voilà que celui avec qui tu avais une inimitié deviendra tel un ami chaleureux." (41:34)',
+      },
+      {
+        dayNum: 6,
+        title: 'Les fruits du Sabr',
+        practice: 'Le sabr donne : la compagnie d\'Allah (2:153), le triomphe (3:200), la récompense sans limite (39:10), et la victoire finale. Médite sur ces promesses divines. Récite "Hasbiyallâhu wa ni\'mal wakîl" 100 fois — confie-toi à Allah.',
+        scripture: '"Ceux-là recevront une double récompense pour leur endurance..." (28:54)',
+      },
+      {
+        dayNum: 7,
+        title: 'Le Sabr comme caractère',
+        practice: 'Le but est que le sabr devienne ton caractère naturel (khuluq), non un effort forcé. Identifie une situation où tu as manqué de patience cette semaine. Refais mentalement la scène avec le sabr prophétique. Puis engage-toi sur un point de progrès.',
+        scripture: '"Le Prophète ﷺ n\'était ni vulgaire ni provocateur. Il disait : Les meilleurs d\'entre vous sont ceux qui ont le meilleur caractère." (Bukhari)',
+      },
+    ],
+  },
+  {
+    id: 'path-gratitude',
+    title: 'École de Gratitude',
+    subtitle: 'Transformer chaque instant en Alhamdulillah',
+    emoji: '🤲',
+    durationDays: 7,
+    premium: true,
+    days: [
+      {
+        dayNum: 1,
+        title: 'Compter les bienfaits',
+        practice: 'Liste 100 bienfaits d\'Allah sur toi aujourd\'hui. Commence par l\'évident (santé, vue, nourriture) puis va vers le subtil (la guidance islamique, la famille, l\'intelligence). Allah dit qu\'Il a donné "tout ce que vous avez demandé" (14:34).',
+        scripture: '"Si vous comptez les bienfaits d\'Allah, vous ne saurez les dénombrer." (16:18)',
+      },
+      {
+        dayNum: 2,
+        title: 'Shukr du corps',
+        practice: 'Remercie Allah pour chaque partie de ton corps fonctionnelle : les yeux, les oreilles, les mains, les pieds, le cœur. Pour chacune, dis "Alhamdulillâh" et utilise-la consciemment pour Allah aujourd\'hui. Combien de millions qui n\'ont pas ce que tu as.',
+        scripture: '"N\'avons-Nous pas fait pour lui deux yeux, une langue et deux lèvres ?" (90:8-9)',
+      },
+      {
+        dayNum: 3,
+        title: 'Shukr de l\'Islam',
+        practice: 'Le plus grand bienfait est la hidaya — la guidance vers l\'islam. Milliards de gens n\'y ont pas accès. Lis la duaa de Moussa alayhissalam : "Rabb awzi\'ni an ashkura ni\'matak..." — O Seigneur, inspire-moi à être reconnaissant pour Tes bienfaits. Répète 10 fois.',
+        scripture: '"Et quiconque est reconnaissant ne l\'est que dans son propre intérêt." (27:40)',
+      },
+      {
+        dayNum: 4,
+        title: 'Shukr actif',
+        practice: 'La gratitude se prouve par l\'action. Choisis aujourd\'hui 3 bienfaits d\'Allah et utilise-les pour Lui : tes mains pour aider quelqu\'un, ta langue pour dire la vérité, ton argent pour la sadaqa. La gratitude active est plus aimée d\'Allah que les mots seuls.',
+        scripture: '"Travaillez, famille de Dawud, en signe de gratitude!" (34:13)',
+      },
+      {
+        dayNum: 5,
+        title: 'Shukr dans l\'épreuve',
+        practice: 'Trouver de la gratitude dans la difficulté est le plus haut niveau de shukr. Prends une épreuve actuelle et cherche 5 bienfaits cachés en elle. Puis dis "Alhamdulillah \'alâ kulli hâl" — Louange à Allah en toutes circonstances.',
+        scripture: '"Le cas du croyant est étonnant : ses affaires sont entièrement bonnes pour lui." (Muslim)',
+      },
+      {
+        dayNum: 6,
+        title: 'Transmettre la gratitude',
+        practice: 'La gratitude se répand. Exprime ta reconnaissance à 3 personnes aujourd\'hui : un proche, un collègue, quelqu\'un que tu tiens pour acquis. Le Prophète ﷺ a dit : "Celui qui n\'est pas reconnaissant envers les gens n\'est pas reconnaissant envers Allah."',
+        scripture: '"Celui qui ne remercie pas les gens ne remercie pas Allah." (Tirmidhi)',
+      },
+      {
+        dayNum: 7,
+        title: 'Rituel de gratitude quotidien',
+        practice: 'Établis un rituel de gratitude permanent : chaque soir avant de dormir, liste 3 bienfaits spécifiques de la journée. Dis "Alhamdulillahi rabbil \'alamin" avec pleine conscience. Ce rituel de 2 minutes transformera ta vision du monde sur le long terme.',
+        scripture: '"Et rappelle-toi le Nom de ton Seigneur matin et soir." (76:25)',
+      },
+    ],
+  },
+  {
+    id: 'path-night',
+    title: 'Lumières de la Nuit',
+    subtitle: 'Découvrir la beauté du Qiyam ul-Layl',
+    emoji: '🌃',
+    durationDays: 7,
+    premium: true,
+    days: [
+      {
+        dayNum: 1,
+        title: 'La valeur de la nuit',
+        practice: 'Lis Surah Al-Muzammil (73) qui commande la prière de la nuit. Comprends : Allah a choisi la nuit comme le moment le plus pur pour la rencontre intime avec Lui. Ce soir, forme l\'intention sincère de te lever avant Fajr, même 15 minutes avant.',
+        scripture: '"Certes, la dévotion nocturne est plus efficace et permet une meilleure récitation." (73:6)',
+      },
+      {
+        dayNum: 2,
+        title: 'Deux rak\'ah de tahajjud',
+        practice: 'Cette nuit, mets une alarme 30 minutes avant Fajr. Fais 2 rak\'ah de tahajjud. Dans le sujud, fais duaa de tout ton cœur. Le Prophète ﷺ a dit qu\'Allah descend pour accueillir ces demandes. Même deux rak\'ah simples valent tout l\'or du monde.',
+        scripture: '"Ils s\'arrachent de leurs couches pour invoquer leur Seigneur avec crainte et espoir." (32:16)',
+      },
+      {
+        dayNum: 3,
+        title: 'Le Witr — La prière du rang impair',
+        practice: 'Le Witr est recommandé fortement — le Prophète ﷺ ne l\'abandonnait jamais, ni en voyage ni chez lui. Fais ce soir le Witr de 3 rak\'ah. Dans la dernière rak\'ah, récite Dua al-Qunut avant le ruku\'. C\'est une des plus belles sunnans de la nuit.',
+        scripture: '"Allah est Impair (Witr) et Il aime l\'impair." (Bukhari)',
+      },
+      {
+        dayNum: 4,
+        title: 'Dhikr de la nuit',
+        practice: 'Avant de dormir, fais les adhkar du coucher : Ayat al-Kursi, Mu\'awwidhatayn × 3, Surah Al-Mulk. Le Prophète ﷺ a dit que Surah Al-Mulk protège du châtiment de la tombe. Ces 15 minutes de dhikr sont la meilleure préparation pour le sommeil.',
+        scripture: '"Celui qui récite les dix premiers versets de Surah Al-Kahf sera protégé du Dajjal." (Muslim)',
+      },
+      {
+        dayNum: 5,
+        title: 'La nuit de ceux qui pleurent',
+        practice: 'Le Prophète ﷺ pleurait souvent dans sa prière de nuit par amour et crainte d\'Allah. Ce n\'est pas de la tristesse — c\'est l\'intimité profonde avec Allah. Cette nuit, récite lentement des versets sur la miséricorde et le Paradis et laisse ton cœur s\'ouvrir.',
+        scripture: '"Ils passent la nuit à se prosterner devant leur Seigneur et debout." (25:64)',
+      },
+      {
+        dayNum: 6,
+        title: 'I\'tikaf du cœur',
+        practice: 'L\'i\'tikaf est la retraite spirituelle en mosquée, mais tu peux faire un "i\'tikaf du cœur" à tout moment. Ce soir, déconnecte-toi de tout (écrans, conversations) une heure avant Isha. Consacre ce temps au Coran, au dhikr, à la méditation.',
+        scripture: '"Et ne vous approchez pas d\'elles (les femmes) alors que vous faites retraite dans les mosquées." (2:187)',
+      },
+      {
+        dayNum: 7,
+        title: 'S\'engager pour la nuit',
+        practice: 'Bilan de la semaine de nuits vécues avec Allah. Qu\'as-tu ressenti ? Y a-t-il eu une connexion particulière ? Engage-toi sur un rythme réaliste : 1 nuit de tahajjud par semaine minimum, witr quotidien, adhkar du coucher tous les soirs.',
+        scripture: '"Et durant la nuit, veille à prier en plus — peut-être ton Seigneur t\'élèvera à une station louable." (17:79)',
+      },
+    ],
+  },
+  {
+    id: 'path-companions',
+    title: 'Compagnons du Paradis',
+    subtitle: 'S\'inspirer des Sahabah pour la vie moderne',
+    emoji: '🏆',
+    durationDays: 7,
+    premium: true,
+    days: [
+      {
+        dayNum: 1,
+        title: 'Abu Bakr As-Siddiq — La Véracité',
+        practice: 'Abu Bakr est "As-Siddiq" — le Véridique. Il était le premier à croire sans hésitation. Sa caractéristique principale : une confiance absolue en Allah et en Son Prophète. Pratique aujourd\'hui la véracité totale dans toutes tes paroles et décisions.',
+        scripture: '"Et celui qui apporte la vérité et celui qui y croit — ce sont eux les pieux." (39:33)',
+      },
+      {
+        dayNum: 2,
+        title: 'Omar ibn Al-Khattab — La Justice',
+        practice: 'Omar était connu pour sa justice inébranlable — même envers lui-même. Il disait : "Demandez-moi des comptes avant qu\'on ne vous demande des comptes." Pratique la muhasaba (le bilan de soi) ce soir : qu\'as-tu accompli aujourd\'hui pour Allah ?',
+        scripture: '"Ô vous qui croyez ! Craignez Allah, que chaque âme regarde ce qu\'elle a accompli pour demain." (59:18)',
+      },
+      {
+        dayNum: 3,
+        title: 'Uthman ibn Affan — La Générosité',
+        practice: 'Uthman a équipé l\'armée islamique de ses propres deniers, acheté le puits de Rûma pour les musulmans. Sa générosité était légendaire. Donne aujourd\'hui une sadaqa significative. "La richesse ne diminue pas par la sadaqa." (Muslim)',
+        scripture: '"Ceux qui dépensent dans le chemin d\'Allah en période d\'aisance et de difficulté." (3:134)',
+      },
+      {
+        dayNum: 4,
+        title: 'Ali ibn Abi Talib — La Sagesse',
+        practice: 'Ali était "Bab al-\'Ilm" — la porte de la connaissance. Il disait : "La valeur de chaque homme réside dans ce qu\'il sait bien faire." Engage-toi aujourd\'hui à apprendre quelque chose d\'islamique : une sourate, un hadith, un article de fiqh.',
+        scripture: '"Dis : Mon Seigneur, accrois-moi en savoir." (20:114)',
+      },
+      {
+        dayNum: 5,
+        title: 'Bilal ibn Rabah — La Constance',
+        practice: 'Bilal a été torturé pour sa foi et disait seulement "Ahad, Ahad!" — Un seul, Un seul! Sa constance malgré l\'épreuve est un modèle universel. Face à ta plus grande difficulté actuelle, répète "Allahu Ahad" 100 fois avec la même conviction de Bilal.',
+        scripture: '"Ensuite ton Seigneur — envers ceux qui ont émigré après avoir été persécutés — Il est vraiment Pardonneur et Miséricordieux." (16:110)',
+      },
+      {
+        dayNum: 6,
+        title: 'Khadijah bint Khuwaylid — Le Soutien',
+        practice: 'Khadijah était la première croyante et le soutien indéfectible du Prophète ﷺ. Elle lui a dit : "Tu maintiens les liens familiaux, tu portes les fardeaux des autres..." Sois aujourd\'hui ce soutien pour quelqu\'un dans ta vie — un mot d\'encouragement, une aide concrète.',
+        scripture: '"Les croyants et les croyantes sont alliés les uns des autres." (9:71)',
+      },
+      {
+        dayNum: 7,
+        title: 'Être un Sahabi moderne',
+        practice: 'Les Sahabah n\'étaient pas des saints parfaits dès le départ — ils se sont construits grâce à la guidance prophétique et à leur effort sincère. Rédige ton "engagement de Sahabi" : quelles 3 qualités sahabiennes t\'engages-tu à développer ?',
+        scripture: '"Les premiers Emigrants et les Ansars, et ceux qui les ont suivis avec bienfaisance, Allah les agrée et ils L\'agréent." (9:100)',
+      },
+    ],
+  },
+];
