@@ -71,8 +71,8 @@ export default function OnboardingScreen() {
 
       {/* Header ornament */}
       <View style={styles.topOrnament}>
-        <Text style={styles.arabicLogo}>شريف</Text>
-        <Text style={styles.logoSub}>Charif</Text>
+        <Text style={styles.mainTitle}>Charif</Text>
+        <Text style={styles.arabicSubtitle}>فيرش</Text>
       </View>
 
       <ScrollView contentContainerStyle={styles.scroll} showsVerticalScrollIndicator={false}>
@@ -186,20 +186,25 @@ const styles = StyleSheet.create({
     paddingTop: 60,
     paddingBottom: 8,
   },
-  arabicLogo: {
-    fontFamily: 'Amiri_700Bold',
-    fontSize: 52,
+  mainTitle: {
+    fontFamily: 'Lato_700Bold',
+    fontSize: 32,
     color: '#C9A84C',
+    letterSpacing: 4,
+    textTransform: 'uppercase',
     textShadowColor: 'rgba(201,168,76,0.35)',
     textShadowOffset: { width: 0, height: 0 },
-    textShadowRadius: 20,
+    textShadowRadius: 16,
   },
-  logoSub: {
-    fontFamily: 'Lato_400Regular',
-    fontSize: 13,
-    color: 'rgba(201,168,76,0.5)',
-    letterSpacing: 6,
-    textTransform: 'uppercase',
+  arabicSubtitle: {
+    fontFamily: 'Amiri_400Regular',
+    fontSize: 24,
+    color: '#C9A84C',
+    textAlign: 'center',
+    marginTop: 4,
+    textShadowColor: 'rgba(201,168,76,0.25)',
+    textShadowOffset: { width: 0, height: 0 },
+    textShadowRadius: 10,
   },
   scroll: {
     paddingHorizontal: 24,
