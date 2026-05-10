@@ -64,7 +64,8 @@
         {
           "icon": "./assets/images/icon.png",
           "color": "#050A1E",
-          "sounds": []
+          "sounds": [],
+          "enableBackgroundRemoteNotifications": false
         }
       ]
     ],

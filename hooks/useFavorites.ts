@@ -1,5 +1,5 @@
 import { useState, useEffect, useCallback } from 'react';
-import { supabase } from '@/lib/supabase';
+import { supabaseEnabled, getSupabase } from '@/lib/supabase';
 import { AsyncStorage_like } from '@/context/storage';
 
 const LOCAL_KEY = 'nour_favorites_v1';
@@ -21,14 +21,19 @@ export function useFavorites() {
   useEffect(() => {
     async function load() {
       try {
-        const { data: session } = await supabase.auth.getSession();
-        if (!session.session) {
-          // No session: use local storage
+        const sb = getSupabase();
+        if (!sb) {
           setFavoriteIds(loadLocal());
           setLoading(false);
           return;
         }
-        const { data } = await supabase.from('favorites').select('card_id');
+        const { data: session } = await sb.auth.getSession();
+        if (!session.session) {
+          setFavoriteIds(loadLocal());
+          setLoading(false);
+          return;
+        }
+        const { data } = await sb.from('favorites').select('card_id');
         if (data) setFavoriteIds(new Set(data.map((f: any) => f.card_id)));
       } catch {
         setFavoriteIds(loadLocal());
@@ -40,26 +45,31 @@ export function useFavorites() {
   }, []);
 
   const toggleFavorite = useCallback(async (cardId: string) => {
-    const { data: session } = await supabase.auth.getSession();
-    const userId = session.session?.user.id;
+    const sb = getSupabase();
+    let userId: string | undefined;
+
+    if (sb) {
+      try {
+        const { data: session } = await sb.auth.getSession();
+        userId = session.session?.user.id;
+      } catch {}
+    }
 
     setFavoriteIds((prev) => {
       const next = new Set(prev);
-      if (next.has(cardId)) {
-        next.delete(cardId);
-      } else {
-        next.add(cardId);
-      }
+      next.has(cardId) ? next.delete(cardId) : next.add(cardId);
       if (!userId) saveLocal(next);
       return next;
     });
 
-    if (userId) {
-      if (favoriteIds.has(cardId)) {
-        await supabase.from('favorites').delete().eq('card_id', cardId).eq('user_id', userId);
-      } else {
-        await supabase.from('favorites').insert({ card_id: cardId, user_id: userId });
-      }
+    if (sb && userId) {
+      try {
+        if (favoriteIds.has(cardId)) {
+          await sb.from('favorites').delete().eq('card_id', cardId).eq('user_id', userId);
+        } else {
+          await sb.from('favorites').insert({ card_id: cardId, user_id: userId });
+        }
+      } catch {}
     }
   }, [favoriteIds]);
 
